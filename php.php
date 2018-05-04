@@ -1,4 +1,4 @@
-
+<?php
 /*
   Ellipsis a passed string. Default limit = 35
 */
@@ -100,3 +100,5 @@ function smoothValues($array)
    }
    return $xNew;
 }
+
+?>
