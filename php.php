@@ -101,4 +101,62 @@ function smoothValues($array)
    return $xNew;
 }
 
+
+
+// IS checkers
+static function isEmail($string) {
+        // $email_pattern = "/^[\w.-]+@[\w.-]+\.[A-Za-z]{2,6}$/"; // easy pattern
+        $email_pattern = "/^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/"; // more complicate pattern
+        if (preg_match($email_pattern, $string)) {
+            return true;
+        } else {
+            return false;
+        }
+}
+
+static function isPhone($string) {
+        $phone_pattern= "/^(?!(?:\d*-){5,})(?!(?:\d* ){5,})\+?[\d- ]+$/";
+        if (preg_match($phone_pattern, $string)) {
+            return true;
+        } else {
+            return false;
+        }
+}
+
+static function isPrice($string) {
+        $price_pattern="/(^[1-9])([0-9]*)(,[[:digit:]]{2})/";
+        if (preg_match($price_pattern, $string)) {
+            return true;
+        } else {
+            return false;
+        }
+}
+
+static function isInt($string) {
+        $int_pattern = "/(^[1-9]\d*$|0)/";
+        if (!preg_match($int_pattern, $string)) {
+            return false;
+        } else {
+             return true;
+        }
+}
+
+static function isPassword($string, $min, $max) {
+        // return true if regular expression is matched
+        // Check password and match against the confirmed password:
+        $regex='/^[a-zA-Z0-9_]{' . $min . ',' . $max . '}$/';
+        if (preg_match($regex, $string)) {
+            return true;
+        } else {
+            return false;
+        }
+}
+
+static function isEmptyString($string) {
+        if (strlen(trim($string)) === 0) {
+            return true;
+        } else {
+            return false;
+        }
+}
 ?>
