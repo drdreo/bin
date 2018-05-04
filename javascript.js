@@ -41,7 +41,7 @@ function insertGETParam(key, value) {
     }
 
     var currUrl = getPathFromUrl(document.URL);
-    history.pushState('data to be passed', 'CrawlerStatus', currUrl + '?' + kvp.join('&'));
+    history.pushState('data to be passed', 'Page', currUrl + '?' + kvp.join('&'));
 
 }
 
@@ -58,7 +58,7 @@ function removeGETParam(key) {
     params = params[1];
     params = params.split('&');
 
-    _j.each(params, function (index, value) {
+    $.each(params, function (index, value) {
         var v = value.split('=');
         if (v[0] != key) url += value + '&';
     });
