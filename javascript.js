@@ -1,3 +1,18 @@
+//JS Array Methods
+/*
+  Remove duplicate entries inside an array. Limited to 2 dimensions.
+*/
+function removeDuplicateItems(arr) => {
+  [...new Set(arr)];
+}
+
+/*
+  Returns a random item of an array.
+*/
+function randomArrayItem(items){
+  return items[Math.floor(Math.random() * items.length)];
+}
+
 //JS URL methods
 /*
   Inserts a GET parameter into the URL.
