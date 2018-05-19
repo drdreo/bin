@@ -1,4 +1,17 @@
 //JS Array Methods
+
+/*
+  Returns a new array which contatins every item from a specific key.
+  The key must be iteratable.
+  Usage:
+  
+  let array = [{name:"one", entries:[1,2,3]},{name:"two", entries: [4]}]
+  console.log(flattenArrayByKey(array, "entries")); // [1,2,3,4]
+*/
+function flattenArrayByKey(array, key){
+   return array.reduce((A,{entries})=>([...A,...entries]), [])
+}
+
 /*
   Remove duplicate entries inside an array. Limited to 2 dimensions.
 */
