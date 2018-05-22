@@ -1,3 +1,57 @@
+//JS Function decorators
+/*
+  Creates a version of the function that executes only once.
+  It’s useful when we want to make sure it runs only once, no matter how many times it is called from different places.
+  
+  let processonce = once(process);
+*/
+function once(fn){
+  let returnValue;
+  let canRun = true;
+  return function runOnce(){
+      if(canRun) {
+          returnValue = fn.apply(this, arguments);
+          canRun = false;
+      }
+      return returnValue;
+  }
+}
+
+/*
+  Creates a version of the function that, when invoked repeatedly, will call the original function once per every wait milliseconds.
+  It’s useful for limiting events that occur faster.
+  
+  let throttledProcess = throttle(process, 666);
+*/
+function throttle(fn, interval) {
+    let lastTime;
+    return function throttled() {
+        let timeSinceLastExecution = Date.now() - lastTime;
+        if(!lastTime || (timeSinceLastExecution >= interval)) {
+            fn.apply(this, arguments);
+            lastTime = Date.now();
+        }
+    };
+}
+
+/*
+  Creates a version of the function that, when invoked repeatedly, will call the original function after wait milliseconds since the last invocation. 
+  It’s useful for running a function only after the event has stopped arriving.
+  
+  let delayProcess = debounce(process, 666);
+*/
+function debounce(fn, interval) {
+    let timer;
+    return function debounced() {
+        clearTimeout(timer);
+        let args = arguments;
+        let that = this;
+        timer = setTimeout(function callOriginalFn() {
+             fn.apply(that, args);
+        }, interval);
+    };
+}
+
 //JS Array Methods
 
 /*
