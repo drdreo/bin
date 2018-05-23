@@ -6,9 +6,11 @@ This should be for any language, but mainly JavaScript, TypeScript, PHP.
 
 [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/Naereen/)
 
+## Datastructures & Alogrithms in JS
+A very cool and detailed repository about general datastructures, alogirthms and their complexity written in JavaScript.
+[https://github.com/trekhleb/javascript-algorithms](https://github.com/trekhleb/javascript-algorithms)
 
-
-## Authors
+## Authors & Contributors
 Every contributor gets mentioned here:
-* [Andreas K. Hahn](https://github.com/drdreo)
+* [Andreas Hahn](https://github.com/drdreo)
 * [Sarah S.](https://github.com/sschauppenlehner)
