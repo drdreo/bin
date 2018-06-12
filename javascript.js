@@ -1,4 +1,5 @@
 //JS Function decorators
+// -------------------------------------------------------------------------------------------------------------------
 /*
   Creates a version of the function that executes only once.
   It’s useful when we want to make sure it runs only once, no matter how many times it is called from different places.
@@ -53,7 +54,7 @@ function debounce(fn, interval) {
 }
 
 //JS Array Methods
-
+// -------------------------------------------------------------------------------------------------------------------
 /*
   Returns a new array which contatins every item from a specific key.
   The key must be iteratable.
@@ -80,7 +81,29 @@ function randomArrayItem(items){
   return items[Math.floor(Math.random() * items.length)];
 }
 
+/*
+  Returns the next items inside a array. If at the end, continues with the first element.
+  startIndex.. where to start looking from (excluded)
+  limit.. how many items should be returned
+*/
+function getRelatedItems( array, startIndex, limit ){
+  const tmp = [];
+
+  for (let i = 0; i < limit; i++){
+    if (array.length - 1 > startIndex){
+      startIndex++; // get the next item
+    } else {
+      startIndex = 0; // if the end of the array is reached, reset to 0
+    }
+    tmp.push(array[startIndex]);
+  }
+
+  return tmp;
+}
+
 //JS URL methods
+// -------------------------------------------------------------------------------------------------------------------
+
 /*
   Inserts a GET parameter into the URL.
   Pass a key and its value.
@@ -157,6 +180,8 @@ function highlightURLs(source)
 }
 
 //JS Random
+// -------------------------------------------------------------------------------------------------------------------
+
 /*
   Generate random number in range
 */
