@@ -11,6 +11,9 @@ This should be for any language, but mainly JavaScript, TypeScript, PHP.
 A very cool and detailed repository about general datastructures, algorithms and their complexity written in JavaScript.
 [https://github.com/trekhleb/javascript-algorithms](https://github.com/trekhleb/javascript-algorithms)
 
+### other docs
+https://github.com/30-seconds/30-seconds-of-code#ary
+
 ## Authors & Contributors
 Every contributor gets mentioned here:
 * [Andreas Hahn](https://github.com/drdreo)
