@@ -1,5 +1,5 @@
 # 💪 Awesome Methods
-A collection of awesome coding methods. Helper functions, neat conventions, something googleing would take longer. 
+A collection of awesome coding methods. Helper functions, neat conventions, something googleing would take longer. Algorithms to test out. 
 This should be for any language, but mainly JavaScript, TypeScript, PHP.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -17,4 +17,3 @@ https://github.com/30-seconds/30-seconds-of-code#ary
 ## Authors & Contributors
 Every contributor gets mentioned here:
 * [Andreas Hahn](https://github.com/drdreo)
-* [Sarah S.](https://github.com/sschauppenlehner)
