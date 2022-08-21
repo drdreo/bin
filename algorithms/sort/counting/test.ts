@@ -7,57 +7,57 @@ import {
 } from "https://deno.land/std@0.152.0/testing/bdd.ts";
 
 import { sortedArr, notSortedArr, equalArr, negativeArrSorted, negativeArr, reverseSortedArr } from "../utils.ts";
-import { Min } from "./min-sort.ts";
+import { Counting } from "./counting-sort.ts";
 
 type TestingValues = any[];
 
 
 describe("CountingSort", () => {
 
-    let min: Min;
+    let counting: Counting;
 
     beforeEach(()=> {
-        min = new Min();
+        counting = new Counting();
     });
 
     it('it should still be an empty array', () => {
         const values: TestingValues = [];
 
-        min.sort(values)
+        counting.sort(values)
         assertEquals(values, []);
     });
 
     it('it should sort the array', () => {
         const values: TestingValues = [...notSortedArr];
-        min.sort(values)
+        counting.sort(values)
         assertEquals(values, sortedArr);
     });
 
     it('it should handle equal values', () => {
         const values: TestingValues = [...equalArr];
         
-        min.sort(values)
+        counting.sort(values)
         assertEquals(values, equalArr);
     });
 
     it('it should handle negative values', () => {
         const values: TestingValues = [...negativeArr];
         
-        min.sort(values)
+        counting.sort(values)
         assertEquals(values, negativeArrSorted);
     });
 
     it('it should handle sorted arrays', () => {
         const values: TestingValues = [...sortedArr];
         
-        min.sort(values)
+        counting.sort(values)
         assertEquals(values, sortedArr);
     });
 
     it('it should handle reverse sorted arrays', () => {
         const values: TestingValues = [...reverseSortedArr];
         
-        min.sort(values)
+        counting.sort(values)
         assertEquals(values, sortedArr);
     });
 

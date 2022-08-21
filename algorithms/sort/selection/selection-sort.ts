@@ -15,6 +15,7 @@ export class Selection {
 
                 this.ticks++;
             }
+            this.ticks++;
             this.swap(v, minIdx, i)
         }
 

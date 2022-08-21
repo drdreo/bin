@@ -16,6 +16,7 @@ export class Bubble {
 
                 this.ticks += 1;
             }
+            this.ticks++;
         }
 
         console.log('done after ticks: ' + this.ticks);

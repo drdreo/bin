@@ -16,6 +16,7 @@ export class Insertion {
                 this.ticks++;
             }
             v[j + 1] = cur;
+            this.ticks++;
         }
 
         console.log('done after ticks: ' + this.ticks);
