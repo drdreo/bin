@@ -7,58 +7,58 @@ import {
 } from "https://deno.land/std@0.152.0/testing/bdd.ts";
 
 import { sortedArr, notSortedArr, equalArr, negativeArrSorted, negativeArr, reverseSortedArr } from "../utils.ts";
-import { Selection } from "./selection-sort.ts";
+import { Min } from "./min-sort.ts";
 
 type TestingValues = any[];
 
 
 describe("MinSort", () => {
 
-    let selection: Selection;
+    let min: Min;
 
     beforeEach(()=> {
-        selection = new Selection();
+        min = new Min();
     });
 
     it('it should still be an empty array', () => {
         const values: TestingValues = [];
 
-        selection.sort(values)
+        min.sort(values)
         assertEquals(values, []);
     });
 
     it('it should sort the array', () => {
         const values: TestingValues = [...notSortedArr];
-        selection.sort(values)
+        min.sort(values)
         assertEquals(values, sortedArr);
     });
 
-    // it('it should handle equal values', () => {
-    //     const values: TestingValues = [...equalArr];
+    it('it should handle equal values', () => {
+        const values: TestingValues = [...equalArr];
         
-    //     selection.sort(values)
-    //     assertEquals(values, equalArr);
-    // });
+        min.sort(values)
+        assertEquals(values, equalArr);
+    });
 
-    // it('it should handle negative values', () => {
-    //     const values: TestingValues = [...negativeArr];
+    it('it should handle negative values', () => {
+        const values: TestingValues = [...negativeArr];
         
-    //     selection.sort(values)
-    //     assertEquals(values, negativeArrSorted);
-    // });
+        min.sort(values)
+        assertEquals(values, negativeArrSorted);
+    });
 
-    // it('it should handle sorted arrays', () => {
-    //     const values: TestingValues = [...sortedArr];
+    it('it should handle sorted arrays', () => {
+        const values: TestingValues = [...sortedArr];
         
-    //     selection.sort(values)
-    //     assertEquals(values, sortedArr);
-    // });
+        min.sort(values)
+        assertEquals(values, sortedArr);
+    });
 
-    // it('it should handle reverse sorted arrays', () => {
-    //     const values: TestingValues = [...reverseSortedArr];
+    it('it should handle reverse sorted arrays', () => {
+        const values: TestingValues = [...reverseSortedArr];
         
-    //     selection.sort(values)
-    //     assertEquals(values, sortedArr);
-    // });
+        min.sort(values)
+        assertEquals(values, sortedArr);
+    });
 
 });
